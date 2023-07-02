@@ -10,6 +10,7 @@ class Task {
   Color? btncolor;
   num? left;
   num? done;
+  List<Map<String,dynamic>>? desc;
   bool islast;
   Task({
     this.icondata,
@@ -19,6 +20,7 @@ class Task {
     this.btncolor,
     this.left,
     this.done,
+    this.desc,
     this.islast=false,
   });
   static List<Task> generateTasks(){
@@ -31,6 +33,51 @@ class Task {
         btncolor: kYellow,
         left: 3,
         done: 1,
+        desc: [
+          {'time':'9:00 am',
+            'title':'finish The managment ui',
+            'slot':'9:00 - 10:00 am',
+            'tlcolor':kRedDark,
+            'bgcolor':kRedLight,
+          },
+          {'time':'10:00 am',
+            'title':'Read the book',
+            'slot':'10:00 - 11:00 am',
+            'tlcolor':kBlueDark,
+            'bgcolor':kBlueLight,
+            },
+            {'time':'11:00 am',
+            'title':' ',
+            'slot':'',
+            'tlcolor':kBlueDark,
+            'bgcolor':Colors.white
+            },
+            {'time':'12:00 am',
+            'title':' ',
+            'slot':'',
+            'tlcolor':Colors.grey.withOpacity(0.3),
+            'bgcolor':Colors.white
+            },
+            {'time':'1:00 pm',
+            'title':'Call with clients ',
+            'slot':'1:00 - 2:00 pm',
+            'tlcolor':kYellowDark,
+            'bgcolor':kYellowLight,
+            },
+            {'time':'2:00 pm',
+            'title':' ',
+            'slot':'',
+            'tlcolor':Colors.grey.withOpacity(0.3),
+            'bgcolor':Colors.white
+            },
+            {'time':'3:00 pm',
+            'title':' ',
+            'slot':'',
+            'tlcolor':Colors.grey.withOpacity(0.3),
+            'bgcolor':Colors.white
+            },
+            
+        ]
       ),
       Task(
         icondata: Icons.cases,

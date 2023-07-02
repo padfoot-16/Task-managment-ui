@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dotted_border: ^2.0.0+3
   table_calendar: ^3.0.9
+  timeline_tile: ^2.0.0
 
 dev_dependencies:
   flutter_test:
