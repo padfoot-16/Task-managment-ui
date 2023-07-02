@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:managmentui/models/tasks_model.dart';
 import 'package:managmentui/screens/detail/widgets/datepicker.dart';
+import 'package:managmentui/screens/detail/widgets/tasktitle.dart';
 
 class DetailPage extends StatelessWidget {
   final Task task;
@@ -26,7 +27,8 @@ class DetailPage extends StatelessWidget {
               child:Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Datepicker()
+                  Datepicker(),
+                  Tasktitle(),
               ]) ,
             ),
           )
