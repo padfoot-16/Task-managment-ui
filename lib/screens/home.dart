@@ -30,7 +30,7 @@ class Homepage extends StatelessWidget {
       bottomNavigationBar: _buildbottomnavbar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         elevation: 0,
         backgroundColor: Colors.black,
         onPressed: (){

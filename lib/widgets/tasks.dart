@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:managmentui/screens/detail/detail.dart';
 import '../models/tasks_model.dart';
 import 'package:dotted_border/dotted_border.dart';
 
@@ -40,34 +41,42 @@ class Tasks extends StatelessWidget {
       );
   }
   Widget _buildTask(BuildContext context, Task task){
-    return Container(
-      padding: EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: task.bgcolor,
-        borderRadius: BorderRadius.circular(20)
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-            Icon(task.icondata,
-            color: task.iconcolor,
-            size: 35,),
-            SizedBox(height: 30,),
-            Text(task.title!,
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold
-            ),),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _buildtaskstatus(task.btncolor!,task.iconcolor!,'${task.left} left'),
-                SizedBox(width: 5),
-                _buildtaskstatus(Colors.white, task.iconcolor!, '${task.done} done')
-              ],
-            ),
-        ],
+    return GestureDetector(
+      onTap: (){
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: 
+          (context)=>DetailPage(task))
+        );
+      },
+      child: Container(
+        padding: EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          color: task.bgcolor,
+          borderRadius: BorderRadius.circular(20)
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+              Icon(task.icondata,
+              color: task.iconcolor,
+              size: 35,),
+              SizedBox(height: 30,),
+              Text(task.title!,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold
+              ),),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _buildtaskstatus(task.btncolor!,task.iconcolor!,'${task.left} left'),
+                  SizedBox(width: 5),
+                  _buildtaskstatus(Colors.white, task.iconcolor!, '${task.done} done')
+                ],
+              ),
+          ],
+        ),
       ),
     );
   }
