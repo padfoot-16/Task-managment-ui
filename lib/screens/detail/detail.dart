@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:managmentui/models/tasks_model.dart';
+import 'package:managmentui/screens/detail/widgets/datepicker.dart';
 
 class DetailPage extends StatelessWidget {
   final Task task;
@@ -15,7 +16,20 @@ class DetailPage extends StatelessWidget {
       backgroundColor: Colors.black,
       body:CustomScrollView(
         slivers: [
-          _buildAppbar(context)
+          _buildAppbar(context),
+          SliverToBoxAdapter(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
+              ),
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Datepicker()
+              ]) ,
+            ),
+          )
         ],
       ) ,
     );
