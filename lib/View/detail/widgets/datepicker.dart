@@ -13,7 +13,7 @@ class _DatepickerState extends State<Datepicker> {
   Widget build(BuildContext context) {
     return Container(
         height: 100,
-        padding: EdgeInsets.symmetric(vertical: 20),
+        padding: EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30), topRight: Radius.circular(30))),
